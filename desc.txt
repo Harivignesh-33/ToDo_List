@@ -1,0 +1,11 @@
+To-Do List App
+Build a simple app that allows users to add, view, and mark tasks as completed.
+Store tasks in an array.
+Display tasks in an unordered list.
+Allow users to add tasks through an input field.
+Provide buttons or checkboxes to mark tasks as completed.
+Instructions:
+Use getElementById() to access HTML elements.
+Use addEventListener() to handle user interactions.
+Use array methods like push() and splice() to manage tasks.
+Use the checked property of checkboxes to track completion.
