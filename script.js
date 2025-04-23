@@ -32,8 +32,14 @@ function displayTasks() {
         const dltBtn = document.createElement("button");
         dltBtn.textContent = "🗑️";
         dltBtn.className = "delete-btn";
-        dltBtn.onclick = () => deleteTask(index);
-
+        dltBtn.onclick = () => {
+            if(checkbox.checked){
+                deleteTask(index);
+            }
+            else{
+                alert("Please check the checkbox before deleting")
+            }
+        };
         const left = document.createElement("div");
         left.className = "left";
         left.append(checkbox, span);
