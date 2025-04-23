@@ -1,3 +1,4 @@
+// array to store  tasks
 const taskList = [];
 
 function addTasks() {
@@ -9,10 +10,13 @@ function addTasks() {
     document.getElementById("taskInput").value = "";
 }
 
+// ? function for task delete 
+
 function deleteTask(index) {
     taskList.splice(index, 1);
     displayTasks();
 }
+// ? function to display all the tasks
 
 function displayTasks() {
     const todoListContainer = document.getElementById("todoList"); // fixed
@@ -20,14 +24,16 @@ function displayTasks() {
 
     taskList.forEach((task, index) => {
         const li = document.createElement("li");
-
+        
+        // checkbox create
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
 
+        // span  element to display the task
         const span = document.createElement("span");
         span.textContent = task;
-
         checkbox.onchange = () => span.classList.toggle("completed"); 
+        // dlt button instead of icon i used an emoji
 
         const dltBtn = document.createElement("button");
         dltBtn.textContent = "🗑️";
@@ -40,6 +46,7 @@ function displayTasks() {
                 alert("Please check the checkbox before deleting")
             }
         };
+        // separate div for each list component (tasks) 
         const left = document.createElement("div");
         left.className = "left";
         left.append(checkbox, span);
