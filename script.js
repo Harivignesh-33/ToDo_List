@@ -3,12 +3,20 @@ const taskList = [];
 
 function addTasks() {
     const task = document.getElementById("taskInput").value.trim();
+    
     if (task !== "") {
         taskList.push(task);
         displayTasks();
     }
     document.getElementById("taskInput").value = "";
 }
+// ?  event listener for the button to call the function
+
+document.getElementById("taskInput").addEventListener("keypress",function(e){
+    if(e.key==="Enter"){
+        addTasks();
+    }
+})
 
 // ? function for task delete 
 
