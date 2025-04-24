@@ -9,14 +9,17 @@ function addTasks() {
         displayTasks();
     }
     document.getElementById("taskInput").value = "";
-}
+};
+
 // ?  event listener for the button to call the function
 
+document.addEventListener("DOMContentLoaded",function(){
 document.getElementById("taskInput").addEventListener("keypress",function(e){
     if(e.key==="Enter"){
         addTasks();
     }
-})
+});
+});
 
 // ? function for task delete 
 
